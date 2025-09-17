@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAC AI - Healthcare Chatbot | Team JARVIS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading" class="loading-screen">
+        <div class="loading-content">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1>MAC AI</h1>
+            </div>
+            <div class="loading-spinner"></div>
+            <p>Initializing healthcare assistant...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1>MAC AI</h1>
+                <span class="beta-tag">SIH 2025</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#team">Team JARVIS</a></li>
+                    <li><button id="loginBtn" class="btn-login">Login</button></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>AI-Driven Public Health Chatbot</h2>
+                <p>Empowering communities with instant access to healthcare information, disease awareness, and medical guidance through cutting-edge AI technology integrated with Ayushman Bharat.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Available</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Languages</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">108</span>
+                        <span class="stat-label">Emergency Ready</span>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <button id="startChatBtn" class="btn-primary">
+                        <i class="fas fa-comments"></i>
+                        Start Health Chat
+                    </button>
+                    <button id="emergencyBtn" class="btn-emergency">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Emergency
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Health Monitoring</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-shield-virus"></i>
+                    <span>Disease Prevention</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-hospital"></i>
+                    <span>Find Hospitals</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Features Section -->
+        <section class="features fade-in" id="features">
+            <div class="section-header">
+                <h3><i class="fas fa-star"></i> Key Features</h3>
+                <p>Comprehensive healthcare solutions powered by AI</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h4>Ayushman Bharat Integration</h4>
+                    <p>Seamless connection with ABDM infrastructure and secure Aadhaar-based identity verification for comprehensive healthcare access.</p>
+                    <div class="feature-tags">
+                        <span class="tag">ABDM</span>
+                        <span class="tag">Secure</span>
+                    </div>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>AI-Powered NLP Engine</h4>
+                    <p>Advanced symptom analysis using state-of-the-art NLP in multiple Indian languages including Hindi, English, and regional dialects.</p>
+                    <div class="feature-tags">
+                        <span class="tag">GPT-4</span>
+                        <span class="tag">Multilingual</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Multi-Channel Access</h4>
+                    <p>Mobile app, SMS, voice interfaces, and web platform reaching rural areas with basic connectivity infrastructure.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Mobile</span>
+                        <span class="tag">SMS</span>
+                        <span class="tag">Voice</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>24/7 Health Assistant</h4>
+                    <p>Real-time health awareness, disease information, preventive care tips, and emergency escalation protocols always available.</p>
+                    <div class="feature-tags">
+                        <span class="tag">24/7</span>
+                        <span class="tag">Emergency</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h4>Privacy-First Design</h4>
+                    <p>Anonymous patient interaction encouraging honest health disclosure without social stigma or privacy concerns.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Anonymous</span>
+                        <span class="tag">HIPAA</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Medical History Integration</h4>
+                    <p>Comprehensive medical database linking patient history for intelligent pattern analysis and personalized care recommendations.</p>
+                    <div class="feature-tags">
+                        <span class="tag">ML</span>
+                        <span class="tag">Patterns</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Interface -->
+        <section class="chat-section" id="chat">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-header-info">
+                        <div class="assistant-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="assistant-details">
+                            <h4>MAC AI Health Assistant</h4>
+                            <div class="status-indicator">
+                                <div class="status-dot online"></div>
+                                <span>Online & Ready to Help</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-controls">
+                        <button class="control-btn" id="clearChatBtn" title="Clear Chat">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                        <button class="control-btn" id="minimizeBtn" title="Minimize">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot welcome-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-text">
+                                🙏 <strong>Namaste! Welcome to MAC AI</strong><br><br>
+                                I'm your personal healthcare companion, integrated with Ayushman Bharat services. I can help you with:
+                                <br><br>
+                                <div class="capability-list">
+                                    <div class="capability"><i class="fas fa-stethoscope"></i> Symptom analysis & guidance</div>
+                                    <div class="capability"><i class="fas fa-shield-virus"></i> Disease awareness & prevention</div>
+                                    <div class="capability"><i class="fas fa-hospital"></i> Healthcare facility information</div>
+                                    <div class="capability"><i class="fas fa-ambulance"></i> Emergency assistance</div>
+                                </div>
+                                <br>
+                                How can I assist with your health concerns today?
+                            </div>
+                            <div class="message-time">Just now</div>
+                        </div>
+                    </div>
+                    
+                    <div class="typing-indicator" id="typingIndicator">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="typing-content">
+                            <div class="typing-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="typing-text">MAC AI is analyzing...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <div class="quick-actions-header">
+                        <span>Quick Health Actions:</span>
+                    </div>
+                    <div class="quick-buttons">
+                        <button class="quick-btn" data-message="I have fever and body ache">
+                            <i class="fas fa-thermometer-half"></i>
+                            Fever Symptoms
+                        </button>
+                        <button class="quick-btn" data-message="Tell me about COVID-19 prevention">
+                            <i class="fas fa-shield-virus"></i>
+                            COVID-19 Info
+                        </button>
+                        <button class="quick-btn" data-message="Find nearest hospital with emergency services">
+                            <i class="fas fa-hospital"></i>
+                            Find Hospital
+                        </button>
+                        <button class="quick-btn" data-message="This is a medical emergency, I need immediate help">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Emergency
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <button class="attachment-btn" title="Attach Image">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                        <textarea 
+                            id="messageInput" 
+                            placeholder="Type your health concern here... (e.g., 'I have a headache and fever')" 
+                            rows="1"
+                            maxlength="500"
+                        ></textarea>
+                        <div class="input-actions">
+                            <button class="voice-btn" id="voiceBtn" title="Voice Input">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <button class="send-btn" id="sendBtn">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input-footer">
+                        <span class="char-count">0/500</span>
+                        <span class="privacy-note">🔒 Your privacy is protected</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>About MAC AI Healthcare Platform</h3>
+                    <p>
+                        MAC AI is an innovative healthcare chatbot developed by <strong>Team JARVIS</strong> for Smart India Hackathon 2025. 
+                        Our solution addresses the critical need for accessible healthcare information in rural and urban India.
+                    </p>
+                    <div class="impact-stats">
+                        <div class="impact-stat">
+                            <h4>500M+</h4>
+                            <p>Ayushman Bharat Beneficiaries</p>
+                        </div>
+                        <div class="impact-stat">
+                            <h4>80%</h4>
+                            <p>Rural Health Worker Improvement</p>
+                        </div>
+                        <div class="impact-stat">
+                            <h4>23%</h4>
+                            <p>Early Detection Improvement</p>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <h4>Technology Stack:</h4>
+                        <div class="tech-tags">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>GPT-4</span>
+                            <span>TensorFlow</span>
+                            <span>AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="architecture-diagram">
+                        <div class="arch-layer">
+                            <span>Frontend Layer</span>
+                            <small>React.js, Mobile Apps</small>
+                        </div>
+                        <div class="arch-arrow">↓</div>
+                        <div class="arch-layer">
+                            <span>API Gateway</span>
+                            <small>Authentication & Routing</small>
+                        </div>
+                        <div class="arch-arrow">↓</div>
+                        <div class="arch-layer">
+                            <span>AI Processing</span>
+                            <small>NLP, ML Models</small>
+                        </div>
+                        <div class="arch-arrow">↓</div>
+                        <div class="arch-layer">
+                            <span>Database Layer</span>
+                            <small>MongoDB, Redis</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+        <div class="container">
+            <div class="section-header">
+                <h3><i class="fas fa-users"></i> Team JARVIS</h3>
+                <p>Smart India Hackathon 2025 - Problem Statement SIH25049</p>
+            </div>
+            <div class="team-info">
+                <div class="problem-statement">
+                    <h4>Problem Statement Details:</h4>
+                    <div class="ps-details">
+                        <div class="ps-item">
+                            <strong>ID:</strong> SIH25049
+                        </div>
+                        <div class="ps-item">
+                            <strong>Title:</strong> AI Driven Public Health Chatbot for Disease Awareness
+                        </div>
+                        <div class="ps-item">
+                            <strong>Theme:</strong> Health Tech
+                        </div>
+                        <div class="ps-item">
+                            <strong>Category:</strong> Software
+                        </div>
+                    </div>
+                </div>
+                <div class="team-achievements">
+                    <h4>Key Achievements:</h4>
+                    <ul>
+                        <li>✅ Ayushman Bharat Integration Architecture</li>
+                        <li>✅ Multi-language NLP Processing</li>
+                        <li>✅ Emergency Escalation Protocols</li>
+                        <li>✅ Privacy-First Healthcare Design</li>
+                        <li>✅ Real-time Symptom Analysis</li>
+                        <li>✅ Cloud-Native Scalable Architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>MAC AI</h3>
+                    </div>
+                    <p>AI-Driven Healthcare for Everyone</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Platform</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#team">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Healthcare</h4>
+                        <ul>
+                            <li><a href="#">Emergency Services</a></li>
+                            <li><a href="#">Find Hospitals</a></li>
+                            <li><a href="#">Health Tips</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>📧 team.jarvis@sih2025.in</li>
+                            <li>📱 Emergency: 108</li>
+                            <li>🌐 Smart India Hackathon</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MAC AI - Team JARVIS | Smart India Hackathon 2025 | Built with ❤️ for Healthcare</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Healthcare Login</h2>
+                <p>Secure access via Ayushman Bharat</p>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="input-group">
+                    <label for="aadhaarId">Aadhaar ID</label>
+                    <input type="text" id="aadhaarId" name="aadhaarId" placeholder="Enter 12-digit Aadhaar number" maxlength="12" required>
+                </div>
+                <div class="input-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter 10-digit mobile number" maxlength="10" required>
+                </div>
+                <button type="submit" class="btn-primary full-width">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login Securely
+                </button>
+            </form>
+            <div class="login-footer">
+                <p><i class="fas fa-shield-alt"></i> Your data is protected with end-to-end encryption</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

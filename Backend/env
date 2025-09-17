@@ -1,0 +1,100 @@
+# MAC AI Healthcare Chatbot - Environment Configuration
+# Team JARVIS - SIH 2025
+
+# Server Configuration
+PORT=5000
+NODE_ENV=development
+API_VERSION=v1
+
+# Frontend URL (for CORS)
+FRONTEND_URL=http://localhost:3000
+
+# Database Configuration
+MONGODB_URI=mongodb://localhost:27017/macai_healthcare
+DB_NAME=macai_healthcare
+
+# JWT Configuration
+JWT_SECRET=mac_ai_super_secret_key_2025_jarvis_team_sih_healthcare_chatbot
+JWT_EXPIRES_IN=24h
+
+# API Keys for AI Services (Replace with your actual keys)
+OPENAI_API_KEY=your_openai_api_key_here
+GEMINI_API_KEY=your_gemini_api_key_here
+AZURE_COGNITIVE_KEY=your_azure_key_here
+
+# SMS Service (Twilio) - For emergency notifications
+TWILIO_ACCOUNT_SID=your_twilio_account_sid
+TWILIO_AUTH_TOKEN=your_twilio_auth_token
+TWILIO_PHONE_NUMBER=+1234567890
+
+# Email Service Configuration
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=macai.healthcare@gmail.com
+SMTP_PASS=your_app_password
+
+# Cloud Storage (Cloudinary) - For medical images/documents
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+# External APIs
+MAPS_API_KEY=your_google_maps_api_key
+WEATHER_API_KEY=your_weather_api_key
+
+# Security Settings
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
+BCRYPT_SALT_ROUNDS=12
+
+# Ayushman Bharat Digital Mission Integration
+ABDM_CLIENT_ID=your_abdm_client_id
+ABDM_CLIENT_SECRET=your_abdm_client_secret
+ABDM_BASE_URL=https://dev-api.abdm.gov.in
+ABDM_GATEWAY_URL=https://dev-hiecm.abdm.gov.in
+
+# Emergency Services Configuration
+EMERGENCY_SMS_ENABLED=true
+EMERGENCY_EMAIL_ENABLED=true
+NATIONAL_AMBULANCE=108
+EMERGENCY_MEDICAL_SERVICE=102
+POLICE_EMERGENCY=100
+FIRE_EMERGENCY=101
+
+# Healthcare Service Numbers
+COVID19_HELPLINE=1075
+MENTAL_HEALTH_HELPLINE=9152987821
+CHILD_HELPLINE=1098
+WOMEN_HELPLINE=1091
+
+# Logging Configuration
+LOG_LEVEL=info
+LOG_FILE=logs/macai.log
+ERROR_LOG_FILE=logs/error.log
+
+# Redis Configuration (for session management and caching)
+REDIS_URL=redis://localhost:6379
+REDIS_PASSWORD=your_redis_password
+
+# Health Facility API Integration
+FACILITY_API_KEY=your_facility_api_key
+FACILITY_API_URL=https://api.healthfacilities.gov.in
+
+# File Upload Configuration
+MAX_FILE_SIZE=10485760
+ALLOWED_FILE_TYPES=jpg,jpeg,png,pdf,doc,docx
+
+# Monitoring and Analytics
+SENTRY_DSN=your_sentry_dsn_for_error_tracking
+GOOGLE_ANALYTICS_ID=your_ga_tracking_id
+
+# Development/Testing Configuration
+ENABLE_MOCK_SERVICES=true
+MOCK_EMERGENCY_RESPONSE=true
+SKIP_REAL_SMS=true
+
+# Production Configuration (Set these for production deployment)
+# SSL_CERT_PATH=/path/to/ssl/cert.pem
+# SSL_KEY_PATH=/path/to/ssl/private-key.pem
+# CLUSTER_MODE=true
+# MAX_WORKERS=4
